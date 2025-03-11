@@ -105,8 +105,8 @@
                 ? "<b>" +
                 props.NAME +
                 "</b><br />" +
-                props.Total +
-                " total pokes"
+                props.Dresser +
+                " total dresser"
                 : "Hover over a state");
     };
   
@@ -169,7 +169,7 @@
         });
     }
   
-    geojson = L.geoJson(test, {
+    geojson = L.geoJson(dressing_total, {
         style: style,
         onEachFeature: onEachFeature
     }).addTo(map);
