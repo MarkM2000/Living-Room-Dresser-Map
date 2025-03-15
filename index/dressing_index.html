@@ -21,9 +21,13 @@
 <body>
     <div class="container-fluid">
         <header class="row bg-dark text-white p-2">
-            <div class="topnav">
-                <a href="#">Living Room</a>
-                <a href="#">Dressing</a>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="topnav">
+                <div class="dropdown-content">
+                    <a href="#">Dressing</a>
+                    <a href="#">Living Room</a>
+                </div>
             </div>
             <div class="col-8">
                 <h1>Dressing Choropleth Map</h1>
@@ -53,7 +57,7 @@
         </div>
         <div class="offcanvas-body">
             <h3 class="py-2">Information</h3>
-            <p>This map shows the total amount of living rooms in several states.</p>
+            <p></p>
             <h3 class="py-2">Sources</h3>
             <li><a></a></li>
             <ul class="list-unstyled">
@@ -111,7 +115,7 @@
 
     // get color depending on SackTotal value
     function getColor(d) {
-        return d > 140
+        return d > 200
             ? "#800026"
             : d > 100
                 ? "#FC4E2A"
