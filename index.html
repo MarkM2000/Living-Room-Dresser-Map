@@ -134,10 +134,10 @@
         // set global variables for map layer,
         // mapped attribute, and normalizing attribute
         let attributeValue = "Bureau";
-        const normValue = "STATE";
+        const normValue = "NAME";
 
         // Make the call to external data
-        fetch("/geojson/dressing_total.geojson")
+        fetch("/geojson/living_room_total.geojson")
             .then(function (response) {
                 if (response.ok) {
                     return response.json();
@@ -153,8 +153,8 @@
 
         function drawMap(data) {
             // create Leaflet data layer and add to map
-            const STATE = L.geoJson(data, {
-                // style STATE with initial default path options
+            const NAME = L.geoJson(data, {
+                // style NAME with initial default path options
                 style: function (feature) {
                     return {
                         color: "#16171c",
@@ -185,22 +185,22 @@
                 },
             }).addTo(map);
 
-            // fit the map's bounds and zoom level using the STATE extent
-            map.fitBounds(STATE.getBounds(), {
-                padding: [18, 18], // add padding around STATE
+            // fit the map's bounds and zoom level using the NAME extent
+            map.fitBounds(NAME.getBounds(), {
+                padding: [18, 18], // add padding around NAME
                 animate: false, // disable animating the zoom
             });
 
             // addLegend(); // add the legend to the map
-            updateMap(STATE); // draw the map
-            addUi(STATE); // add UI controls
+            updateMap(NAME); // draw the map
+            addUi(NAME); // add UI controls
         }
 
-        function updateMap(STATE) {
-            let breaks = getClassBreaks(STATE);
+        function updateMap(NAME) {
+            let breaks = getClassBreaks(NAME);
 
             // loop through each county layer to update the color and tooltip info
-            STATE.eachLayer(function (layer) {
+            NAME.eachLayer(function (layer) {
                 let props = layer.feature.properties;
 
                 // set the fill color of layer based on its normalized data value
@@ -224,12 +224,12 @@ ${((props[attributeValue])).toLocaleString()}`;
         }
 
         // Get class breaks in data
-        function getClassBreaks(STATE) {
+        function getClassBreaks(NAME) {
             // create empty Array for storing values
             const values = [];
 
-            // loop through all the STATE
-            STATE.eachLayer(function (layer) {
+            // loop through all the NAME
+            NAME.eachLayer(function (layer) {
                 let value =
                     layer.feature.properties[attributeValue]
                 values.push(value); // push the normalized value for each layer into the Array
@@ -250,7 +250,7 @@ ${((props[attributeValue])).toLocaleString()}`;
         // Get color
         function getColor(d, breaks) {
             // function accepts a single normalized data attribute value
-            // and uses a series of conditional statements to determine which
+            // and uses a series of conditional NAMEments to determine which
             // which color value to return to return to the function caller
 
             if (d <= breaks[0][0]) {
@@ -314,7 +314,7 @@ ${((props[attributeValue])).toLocaleString()}`;
             }
         }
 
-        function addUi(STATE) {
+        function addUi(NAME) {
             // create the slider control
             var selectControl = L.control({ position: "topright" });
 
@@ -336,7 +336,7 @@ ${((props[attributeValue])).toLocaleString()}`;
                 attributeValue = e.target.value;
 
                 // update the map
-                updateMap(STATE);
+                updateMap(NAME);
 
             });
         }
