@@ -74,7 +74,7 @@
     <!-- ui is outside of container-fluid and will be dynamically added to map -->
     <div class="form-group me-3 mt-3" id="dropdown-ui">
         <select class="form-control bg-primary text-white">
-            <option value="Bureau">Bureau total</option>
+            <option value="Front_room">Front room total</option>
         </select>
     </div>
     <!-- end ui-controls -->
@@ -128,12 +128,12 @@
         }
 
         const labels = {
-            Bureau: "Bureau total",
+            Front_room: "Front room total",
         }
 
         // set global variables for map layer,
         // mapped attribute, and normalizing attribute
-        let attributeValue = "Bureau";
+        let attributeValue = "Front_room";
         const normValue = "NAME";
 
         // Make the call to external data
