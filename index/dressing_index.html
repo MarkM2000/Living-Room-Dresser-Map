@@ -150,7 +150,7 @@
         const normValue = "STATE";
 
         // Make the call to external data
-        fetch("/geojson/dressing_total.geojson")
+        fetch("geojson/dressing_total.geojson")
             .then(function (response) {
                 if (response.ok) {
                     return response.json();
