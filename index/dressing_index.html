@@ -14,9 +14,9 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@300;700&display=swap" rel="stylesheet" />
     <!-- Styles CSS -->
-    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
     <!-- TopNav CSS -->
-    <link href="/css/topnav.css" rel="stylesheet" />
+    <link href="../css/topnav.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -150,7 +150,7 @@
         const normValue = "STATE";
 
         // Make the call to external data
-        fetch("geojson/dressing_total.geojson")
+        fetch("..geojson/dressing_total.geojson")
             .then(function (response) {
                 if (response.ok) {
                     return response.json();
