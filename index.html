@@ -76,12 +76,7 @@
     <!-- ui is outside of container-fluid and will be dynamically added to map -->
     <div class="form-group me-3 mt-3" id="dropdown-ui">
         <select class="form-control bg-primary text-white">
-            <option value="Bureau">Bureau total</option>
-            <option value="Chest">Chest total</option>
-            <option value="Chest_of_drawers">Chest of drawers</option>
-            <option value="Dresser">Dresser total</option>
-            <option value="Highboy">Highboy total</option>
-            <option value="Sideboard">Sideboard total</option>
+            <option value="Front_room">Front room total</option>
         </select>
     </div>
     <!-- end ui-controls -->
@@ -135,12 +130,7 @@
         }
 
         const labels = {
-            Bureau: "Bureau total",
-            Chest: "Chest total",
-            Chest_of_drawers: "Chest of drawers",
-            Dresser: "Dresser total",
-            Highboy: "Highboy total",
-            Sideboard: "Sideboard total",
+            Front_room: "Front room total",
         }
 
         // set global variables for map layer,
@@ -149,7 +139,7 @@
         const normValue = "STATE";
 
         // Make the call to external data
-        fetch("")
+        fetch("geojson/living_room_total.geojson")
             .then(function (response) {
                 if (response.ok) {
                     return response.json();
