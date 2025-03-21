@@ -58,7 +58,7 @@
         </div>
         <div class="offcanvas-body">
             <h3 class="py-2">Information</h3>
-            <p>This page contains choropleth maps of the total amount of living room types. This includes the total amount of front room, living room, parlor, setting room, and sitting room.</p>
+            <p>This page contains choropleth maps that includes types of living rooms. Note that sitting room and setting rooms are the same terms. These terms are front room, living room, parlor, setting room, and sitting room.</p>
             <h3 class="py-2">Sources</h3>
             <li><a href="https://www.flooringhut.co.uk/blog/2023/10/20/sitting-room-vs-living-room/">Sitting Room vs. Living Room: What’s the Difference?</a></li>
             <li><a href="https://www.ohio.edu/news/2024/05/art-space-exploring-impact-interior-design-environments">The Art of Space: Exploring the impact of interior design on environments</a></li>
@@ -76,7 +76,6 @@
     <!-- ui is outside of container-fluid and will be dynamically added to map -->
     <div class="form-group me-3 mt-3" id="dropdown-ui">
         <select class="form-control bg-primary text-white">
-            <option value="Big_house">Big house total</option>
             <option value="Front_room">Front room total</option>
             <option value="Living_room">Living room total</option>
             <option value="Parlor">Parlor total</option>
@@ -135,7 +134,6 @@
         }
 
         const labels = {
-            Big_house: "Big house total",
             Front_room: "Front room total",
             Living_room: "Living room total",
             Parlor: "Parlor total",
@@ -145,7 +143,7 @@
 
         // set global variables for map layer,
         // mapped attribute, and normalizing attribute
-        let attributeValue = "Big_house";
+        let attributeValue = "Front_room";
         const normValue = "NAME";
 
         // Make the call to external data
