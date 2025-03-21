@@ -139,7 +139,7 @@
         const normValue = "NAME";
 
         // Make the call to external data
-        fetch("")
+        fetch("geojson/living_room_total.geojson")
             .then(function (response) {
                 if (response.ok) {
                     return response.json();
