@@ -67,6 +67,8 @@
 <script src="location_js/living_room/sitting_room.js"></script>
 <!-- Variables JS file -->
 <script src="js/variables.js"></script>
+<!-- Add L.Control.Layers.Tree JS file -->
+<script src="src/L.Control.Layers.Tree.js"></script>
 <script>
     var map = L.map('map', {
         center: [37, -86],
@@ -84,6 +86,7 @@
             {
                 label: 'Dressing',
                 children: [
+                    { label: 'Bureau', layer: bureau },
                 ]
             },
             {
