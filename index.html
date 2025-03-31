@@ -27,22 +27,12 @@
     </div>
     <div class="container-fluid">
         <header class="row bg-dark text-white p-2">
-            <div class="col-8">
-                <h1>Living Room and Dresser Map</h1>
-            </div>
-            <div class="col-4 align-self-center">
-                <p class="d-flex justify-content-end my-auto"><a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> Information</a></p>
-            </div>
+            <div class="col-8"><h1>Living Room and Dresser Map</h1></div>
+            <div class="col-4 align-self-center"> <p class="d-flex justify-content-end my-auto"><a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> Information</a></p></div>
         </header>
 
-        <section class="row">
-            <div class="p-0">
-                <div id="map"></div>
-            </div>
-        </section>
-        <footer class="row bg-dark text-white p-2">
-            <p class="text-center"></p>
-        </footer>
+        <section class="row"><div class="p-0"><div id="map"></div></div></section>
+        <footer class="row bg-dark text-white p-2"><p class="text-center"></p></footer>
     </div>
 </body>
 <!-- Add Bootstrap JS -->
@@ -77,4 +67,22 @@
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+
+    var baseTree = {
+        label: 'Base Layers',
+        children: [
+            {
+                label: 'Dressing',
+                children: [
+                ]
+            },
+            {
+                label: 'Living Room',
+                children: [
+                ]
+            },
+        ]
+    }
+
+    L.control.layers.tree(baseTree).addTo(map);
 </script>
