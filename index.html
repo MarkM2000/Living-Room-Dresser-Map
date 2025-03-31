@@ -31,8 +31,7 @@
                 <h1>Living Room and Dresser Map</h1>
             </div>
             <div class="col-4 align-self-center">
-                <p class="d-flex justify-content-end my-auto">
-                    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> Information</a></p>
+                <p class="d-flex justify-content-end my-auto"><a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> Information</a></p>
             </div>
         </header>
 
@@ -68,3 +67,14 @@
 <script src="location_js/living_room/parlor.js"></script>
 <script src="location_js/living_room/setting_room.js"></script>
 <script src="location_js/living_room/sitting_room.js"></script>
+<script>
+    var map = L.map('map', {
+        center: [37, -86],
+        zoom: 5.4
+    });
+
+    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+</script>
