@@ -12,7 +12,7 @@ var bureau = L.geoJson(bureau, {
     onEachFeature: function (feature, layer) {
         const props = feature.properties
         const popup = `
-					<b>${props.informant}</b>
+					<b>${props.Informant}</b>
 					<br>Dresser type: ${props.Dresser}<br>
 				`
         layer.bindTooltip(popup, {
