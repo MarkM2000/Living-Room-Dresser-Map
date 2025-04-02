@@ -29,18 +29,31 @@
     </div>
     <div class="container-fluid">
         <header class="row bg-dark text-white p-2">
-            <div class="col-8">
-                <h1>Living Room and Dresser Map</h1>
-            </div>
-            <div class="col-4 align-self-center">
-                <p class="d-flex justify-content-end my-auto"><a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> Information</a></p>
-            </div>
+            <div class="col-8"><h1>Living Room and Dresser Map</h1></div>
+            <div class="col-4 align-self-center"><p class="d-flex justify-content-end my-auto"><a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> Information</a></p></div>
         </header>
 
-        <section class="row">
-            <div class="p-0"><div id="map"></div></div>
-        </section>
+        <section class="row"><div class="p-0"><div id="map"></div></div></section>
         <footer class="row bg-dark text-white p-2"><p class="text-center"></p></footer>
+    </div>
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Map Info</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h3 class="py-2">Information</h3>
+            <p>This page contains choropleth maps of the total amount of dressing types. This includes the total amount of bureau, chest, chest of drawers, dressers, highboys, and sideboards.</p>
+            <h3 class="py-2">Sources</h3>
+            <li><a href="https://www.cabinfield.com/blog/types-of-dressers-bedroom-chests-designs-styles/?srsltid=AfmBOooOZzV7rzVkaDhm4Vx7AOmfNQFSBA8rs0Qe3HSefZ3eqKeq1lbJ">Types of Dressers & Bedroom Chests (Designs & Styles)</a></li>
+            <li><a href="https://www.chairish.com/blog/difference-between-dresser-and-bureau/">What is the Difference Between a Dresser and a Bureau?</a></li>
+            <li><a href="https://doi.org/10.1215/00031283-76-2-139">The Story Of Chester Drawers</a></li>
+            <li><a href="https://github.com/Linguistic-Atlas-Project">Data link</a></li>
+            <ul class="list-unstyled">
+                <li>Authored by Mark Marji</li>
+            </ul>
+        </div>
     </div>
 </body>
 <!-- Add Bootstrap JS -->
